@@ -33,3 +33,15 @@ class LinkedList(object):
     def __init__(self, node = None):
         self.length = 0
         self.head = node
+
+    # Traversing the Linked List
+    def ListLength(self):
+        current = self.head
+        count = 0
+        while current != None:
+            count = count+1
+            current = current.next
+        return count
+
+my_linked_list = LinkedList()
+print(my_linked_list.ListLength())
