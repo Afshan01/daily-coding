@@ -43,5 +43,22 @@ class LinkedList(object):
             current = current.next
         return count
 
+    # method for inserting a new node at the beginning of the Linked List (at the head)
+    def insertAtBeginning(self, data):
+        newNode = Node()
+        newNode.data = data
+        if self.length == 0:
+            self.head = newNode
+        else:
+            newNode.next = self.head
+            self.head = newNode
+        self.length += 1
+
 my_linked_list = LinkedList()
+my_linked_list.insertAtBeginning(5)
+my_linked_list.insertAtBeginning(4)
+my_linked_list.insertAtBeginning(3)
+my_linked_list.insertAtBeginning(2)
+my_linked_list.insertAtBeginning(1)
+
 print(my_linked_list.ListLength())
