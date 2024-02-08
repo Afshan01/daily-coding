@@ -54,11 +54,19 @@ class LinkedList(object):
             self.head = newNode
         self.length += 1
 
+    def print_list(self):
+        temp = self.head
+        while temp is not None:
+            print(temp.data)
+            temp = temp.next
+
 my_linked_list = LinkedList()
-my_linked_list.insertAtBeginning(5)
+my_linked_list.insertAtBeginning('First Item')
 my_linked_list.insertAtBeginning(4)
 my_linked_list.insertAtBeginning(3)
 my_linked_list.insertAtBeginning(2)
 my_linked_list.insertAtBeginning(1)
 
-print(my_linked_list.ListLength())
+# print(my_linked_list.ListLength())
+
+my_linked_list.print_list()
